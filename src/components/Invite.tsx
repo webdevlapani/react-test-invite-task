@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { AutoComplete, Button, Card, Col, Row, Tag, Input, Modal, Spin } from 'antd';
-import styled from 'styled-components';
 import { DeleteOutlined, MessageFilled } from '@ant-design/icons';
-import { getUsers } from '../store/Users/userServices';
+import { AutoComplete, Button, Card, Col, Input, Modal, Row, Spin, Tag } from 'antd';
+import moment from 'moment';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
+import { useDebounce } from '../hooks/useDebounce';
+import { IInvites } from '../store/Invites/IInvites';
 import { addInvites, deleteInvites, getInvites } from '../store/Invites/invitesServices';
 import { IRootReducerState } from '../store/IRootReducer';
-import { useDebounce } from '../hooks/useDebounce';
 import { IUser } from '../store/Users/IUser';
-import { IInvites } from '../store/Invites/IInvites';
-import moment from 'moment';
+import { getUsers } from '../store/Users/userServices';
 
 const StyledRow = styled(Row)`
   margin: 30px;
