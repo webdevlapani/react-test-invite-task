@@ -1,9 +1,9 @@
 import 'antd/dist/antd.css';
+import axios from 'axios';
 import React, { FC } from 'react';
+import { Provider } from 'react-redux';
 import Invite from './components/Invite';
 import store from './store/store';
-import { Provider } from 'react-redux';
-import axios from 'axios';
 
 axios.defaults.baseURL = process.env.REACT_APP_BASEURL;
 
