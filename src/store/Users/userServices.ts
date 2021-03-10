@@ -1,10 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
-import {
-  getUsersFailure,
-  getUsersRequest,
-  getUsersSuccess
-} from './userActions';
-
+import { getUsersFailure, getUsersRequest, getUsersSuccess } from './userActions';
 
 /**
  * service for current user.

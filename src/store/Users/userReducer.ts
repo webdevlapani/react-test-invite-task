@@ -1,9 +1,5 @@
 import { IAction } from '../IAction';
-import {
-  GET_USERS_FAILURE,
-  GET_USERS_REQUEST,
-  GET_USERS_SUCCESS,
-} from './userTypes';
+import { GET_USERS_FAILURE, GET_USERS_REQUEST, GET_USERS_SUCCESS } from './userTypes';
 import { IUser } from './IUser';
 
 export interface IUsersState {

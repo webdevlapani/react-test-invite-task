@@ -7,10 +7,9 @@ import axios from 'axios';
 
 axios.defaults.baseURL = process.env.REACT_APP_BASEURL;
 
-
-const App: FC = () => <Provider store={store}>
+const App: FC = () => (
+  <Provider store={store}>
     <Invite />
   </Provider>
-  ;
-
+);
 export default App;

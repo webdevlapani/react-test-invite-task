@@ -7,5 +7,5 @@ export interface IInvites {
   createdAt: string;
   updatedAt: string;
   __v: number;
-  user: IUser
+  user: IUser;
 }

@@ -57,20 +57,38 @@
     "lint": "tslint  './src/**/*.tsx' './src/**/*.ts'",
     "lint-fix": "./node_modules/.bin/prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "./node_modules/.bin/prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
-      "git add"
-    ],
-    "src/**/*.{js,jsx,ts,tsx,css,scss,md}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "linters": {
+      "src/**/*.ts": [
+        "prettier-standard",
+        "npx sortier",
+        "eslint --ignore-pattern internals/scripts",
+        "git add",
+        "jest --config jest.json --findRelatedTests"
+      ],
+      "src/**/*.tsx": [
+        "prettier-standard",
+        "npx sortier",
+        "eslint --ignore-pattern internals/scripts",
+        "git add",
+        "jest --config jest.json --findRelatedTests"
+      ],
+      "src/**/*.json": [
+        "prettier-standard",
+        "npx sortier",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "**/package.json",
+      "**/yarn.lock",
+      "src/data/config.js"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"

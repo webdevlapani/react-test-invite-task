@@ -7,7 +7,7 @@ import {
   DELETE_INVITES_REQUEST_SUCCESS,
   GET_INVITES_REQUEST,
   GET_INVITES_REQUEST_FAILURE,
-  GET_INVITES_REQUEST_SUCCESS
+  GET_INVITES_REQUEST_SUCCESS,
 } from './invitesTypes';
 import { IAction } from '../IAction';
 import { IInvites } from './IInvites';

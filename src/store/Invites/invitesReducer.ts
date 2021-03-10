@@ -1,7 +1,8 @@
 import { IAction } from '../IAction';
 import {
-  GET_INVITES_REQUEST, GET_INVITES_REQUEST_FAILURE, GET_INVITES_REQUEST_SUCCESS
-
+  GET_INVITES_REQUEST,
+  GET_INVITES_REQUEST_FAILURE,
+  GET_INVITES_REQUEST_SUCCESS,
 } from './invitesTypes';
 import { IInvites } from './IInvites';
 

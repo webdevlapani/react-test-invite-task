@@ -2,7 +2,8 @@ import axios, { AxiosResponse } from 'axios';
 import {
   addInvitesFailure,
   addInvitesRequest,
-  addInvitesSuccess, deleteInvitesFailure,
+  addInvitesSuccess,
+  deleteInvitesFailure,
   deleteInvitesRequest,
   deleteInvitesSuccess,
   getInvitesFailure,
@@ -34,7 +35,7 @@ export const addInvites = (userId: string, callBack: () => void) => {
   return (dispatch) => {
     dispatch(addInvitesRequest());
     axios
-      .post('invites', {userId})
+      .post('invites', { userId })
       .then((response: AxiosResponse) => {
         dispatch(addInvitesSuccess(response.data));
         callBack();

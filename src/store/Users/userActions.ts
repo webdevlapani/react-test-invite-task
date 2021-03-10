@@ -1,8 +1,4 @@
-import {
-  GET_USERS_FAILURE,
-  GET_USERS_REQUEST,
-  GET_USERS_SUCCESS
-} from './userTypes';
+import { GET_USERS_FAILURE, GET_USERS_REQUEST, GET_USERS_SUCCESS } from './userTypes';
 import { IAction } from '../IAction';
 import { IUser } from './IUser';
 
@@ -11,7 +7,7 @@ import { IUser } from './IUser';
  */
 export const getUsersRequest = (): IAction => {
   return {
-    type: GET_USERS_REQUEST ,
+    type: GET_USERS_REQUEST,
   };
 };
 
